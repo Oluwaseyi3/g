@@ -45,6 +45,7 @@ import Preloader from "../../components/Preloader/Preloader";
 import { MinimalPositionCard } from '@/components/PositionCard'
 import ViewScan from '../../assets/viewscan.svg'
 import RateSetModal from "@/components/RateSetModal";
+import Image from 'next/image';
 
 const Dots = styled.span`
   &::after {
@@ -346,10 +347,22 @@ export default function AddLiquidity({ currencyIdA, currencyIdB }: { currencyIdA
         <div className="w-full px-3">
           <div className="px-3 w-full">
             <button className="bg-[#ffffff] rounded-md px-5 pb-3 pt-3 stripe_rate_btn mt-7" onClick={eventsModalOpenHandler}>
-              <img src="/assets/btn_stripe.png" alt="" /><span className=" tracking-wide">SET RATE FOR STRIPE</span>
+            <Image
+                src="/assets/btn_stripe.png" 
+                alt="Image description"
+                width={100} // optional width
+                height={50} // optional height
+                />
+          <span className=" tracking-wide">SET RATE FOR STRIPE</span>
             </button>
             <button className="bg-[#ffffff] rounded-md px-5 pb-3 pt-3 stripe_rate_btn mt-2" onClick={eventsModalOpenHandler}>
-              <img src="/assets/history.png" alt="no image" className="w-[26px] h-[22px]" /><span className="tracking-wide">TRANSACTION HISTORY</span>
+            <Image
+                src="/assets/history.png"
+                alt="Image description"
+                width={100} // optional width
+                height={50} // optional height
+                />
+             <span className="tracking-wide">TRANSACTION HISTORY</span>
             </button>
           </div>
         </div>

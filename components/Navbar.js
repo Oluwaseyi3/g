@@ -9,6 +9,7 @@ import MarketPlaceSVG from '/assets/marketplace.svg';
 import { useSelector, useDispatch } from 'react-redux';
 import * as notify from '../state/ylttoast/index';
 import OneSignal from 'react-onesignal';
+import Image from 'next/image';
 
 // import busd from "../assets/busd.png"
 // import menu from "../assets/menu.png"
@@ -116,12 +117,30 @@ export default function Navbar({ setIsLoading }) {
         <nav className="w-full text-white ">
             <div className="flex items-center font-medium justify-between p-4">
             <div className="z-50 p-0 sm:w-auto flex justify-between">
-            <img src="/assets/swapWagonLogo.png" alt="no image" className="h-[80px]" />
+            <Image
+  src="/assets/swapWagonLogo.png" // Replace with your image path
+  alt="Image description"
+  width={100} // optional width
+  height={50} // optional height
+/>
+
+
+           
                <div className="text-3xl lg:hidden flex justify-items-end" onClick={() => setOpen(!open)}>
                  {/* <image src={`${open ? busd: busd}`}  alt="dj"/> */}
                  {
-                  open ?  <img src="/assets/link.png" alt="no image" className="h-[80px]" /> :
-                  <img src="/assets/lines.png" alt="no image" className="h-[80px]" />
+                  open ?  <Image
+                  src= "/assets/link.png"// Replace with your image path
+                  alt="Image description"
+                  width={100} // optional width
+                  height={50} // optional height
+                /> :
+                <Image
+                src= "/assets/lines.png"// Replace with your image path
+                alt="Image description"
+                width={100} // optional width
+                height={50} // optional height
+              />
                  }
                 
                 
@@ -159,25 +178,25 @@ export default function Navbar({ setIsLoading }) {
         `}
         >
           <li>
-            <a href="/" className="py-7 px-3 inline-block">
+            <div  className="py-7 px-3 inline-block">
             <Link key={1} href="/"><span className="flex text-[18px] text-[#ffffff] decoration-[#3985F5]">Swap</span></Link>
-            </a>
+            </div>
           </li>
 
           <li>
-            <a href="/services" className="py-7 px-3 inline-block">
+            <div className="py-7 px-3 inline-block">
             <Link kye={2} href="/"><span className="flex text-[18px] text-[#ffffff] decoration-[#3985F5]">How it works</span></Link>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="/about" className="py-7 px-3 inline-block">
+            <div className="py-7 px-3 inline-block">
             <Link kye={3} href="/"><span className="flex text-[18px] text-[#ffffff] decoration-[#3985F5]">FAQ</span></Link>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="/membership" className="py-7 px-3 inline-block">
+            <div className="py-7 px-3 inline-block">
             <Link kye={3} href="/"><span className="flex text-[18px] text-[#ffffff] decoration-[#3985F5]">$ATK</span></Link>
-            </a>
+            </div>
           </li>
 
           <li>
