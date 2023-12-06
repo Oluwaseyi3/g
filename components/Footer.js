@@ -7,9 +7,9 @@ import { useEffect, useState } from 'react';
 export default function Footer() {
     const [tokenURI, setTokenURI] = useState("")
     const { authenticate, isAuthenticated, user } = useMoralis();
-    useEffect(() => {
-		setTokenURI(`?token=${user?.id}`)
-	}, [isAuthenticated])
+    // useEffect(() => {
+	// 	setTokenURI(`?token=${user?.id}`)
+	// }, [isAuthenticated])
     return (
         <footer className="px-3 w-full">
             <div className="w-full h-[136px] flex items-center px-5 md:px-7 bg-[#61616A] rounded-lg">
